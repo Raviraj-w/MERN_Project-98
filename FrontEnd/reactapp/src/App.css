@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Fresh Mint/Sky Mesh Gradient */
+  background: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+              radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+              radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  background-color: #e0f2f1; /* Light mint base */
+  background-image: 
+    radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* The "Soft" Authentication Card */
+.auth-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  
+  
+  width: 380px; 
+  min-height: 450px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-container h2 {
+  color: #2d3436;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Elegant Inputs */
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #f1f3f5;
+  border-radius: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Crucial for width */
+}
+
+.input-group input:focus {
+  border-color: #74b9ff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(116, 185, 255, 0.3);
+}
+
+/* Standardizing the Button for both Login and Signup */
+.auth-container button {
+  /* Colors */
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); /* Light blue to a slightly deeper blue */
+  color: white;
+  
+  /* Shape & Size */
+  width: 100%;             /* Fills the container width */
+  max-width: 320px;        /* Limits width so it doesn't get too big */
+  height: 50px;            /* Forces both buttons to be the exact same height */
+  border-radius: 25px;     /* Makes the corners perfectly rounded (pill shape) */
+  
+  /* Text & Border */
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  
+  /* Animation */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(116, 185, 255, 0.4);
+  
+  /* Centering */
+  display: block;
+  margin: 20px auto 0 auto; /* Centers the button horizontally */
+}
+
+/* Hover effect */
+.auth-container button:hover {
+  background: linear-gradient(135deg, #81c4ff 0%, #0a8df5 100%);
+  transform: translateY(-2px); /* Lifts up slightly */
+  box-shadow: 0 6px 20px rgba(116, 185, 255, 0.6);
+}
+
+.auth-container button:active {
+  transform: translateY(0); /* Sinks back down when clicked */
+}
+
+.main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(9, 132, 227, 0.4);
+}
+
+.toggle-text {
+  margin-top: 1.5rem;
+  color: #636e72;
+  font-size: 0.9rem;
+}
+
+.toggle-link {
+  color: #0984e3;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+/* This is the animation logic */
+@keyframes meshGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apply the animation to the body */
+body {
+  background-size: 400% 400%; /* Makes the gradient larger than the screen so it can move */
+  animation: meshGradient 15s ease infinite; /* 15 seconds for a slow, smooth transition */
+}
+.msg-text {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;    /* Adds space ABOVE the message now */
+  margin-bottom: 0px;  /* Removes space at the bottom */
+  text-align: center;
+  width: 100%;
+}
+
+/* Success color only */
+.success-color {
+  color: #27ae60;
+}
+
+/* Error color only */
+.error-color {
+  color: #e74c3c;
+}
